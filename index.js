@@ -19,7 +19,7 @@ uniswapContractAddress.map(async address => {
     const pool = new ethers.Contract(address, uniswapv3PoolArtifact.abi, providerEthereum)
 
     await pool.on('Mint', async (sender, owner, tickLower, tickUpper, amount, _amount0, _amount1) => {
-        console.log('Novo par de liquidez adicionado no Uniswap na Ethereum:');
+        console.log('Nova liquidez adicionada no Uniswap na Ethereum:');
         console.log('Token0:', sender);
         console.log('Token1:', owner);
         console.log('Quantidade de LP:', amount.toString());
@@ -56,7 +56,7 @@ pancakeSwapContractAddress.map(async address => {
     const pool = new ethers.Contract(address, pancakeswapv3PoolArtifact.abi, providerBSC)
 
     await pool.on('Mint', async (sender, owner, tickLower, tickUpper, amount, _amount0, _amount1) => {
-        console.log('Novo par de liquidez adicionado no PancakeSwap na BSC:');
+        console.log('Nova liquidez adicionada no PancakeSwap na BSC:');
         console.log('Token0:', sender);
         console.log('Token1:', owner);
         console.log('Quantidade de LP:', amount.toString());
