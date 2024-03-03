@@ -78,7 +78,7 @@ pancakeSwapContractAddress.map(async address => {
                 const token0 = await contract.token0();
                 const token1 = await contract.token1();
 
-                // Verificar qual token não é WETH
+                // Verificar qual token não é WBNB
                 const erc20Token = token0 === '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' ? token1 : token0;
                 let token0Contract = new ethers.Contract(erc20Token, pancakeswapv2Pair.abi, providerBSC);
 
