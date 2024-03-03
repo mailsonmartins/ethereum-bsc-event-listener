@@ -8,8 +8,8 @@
 2. Instale as dependências abaixo:
 
 npm install ethers
-npm install @uniswap/v3-core
-npm install @pancakeswap/v3-core
+npm install @uniswap/v2-core  
+npm install @pancakeswap-libs/pancake-swap-core
 npm install dotenv
 --------------------------------------
 
